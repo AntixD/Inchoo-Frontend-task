@@ -2,7 +2,7 @@ function toggleAccordion(id) {
   var element = document.getElementById(id);
   var icon = document.querySelector(".shopping__estimate-toggle-icon");
 
-  if (element.style.display === "none") {
+  if (element.style.display === "none" || !element.style.display) {
     element.style.display = "block";
     icon.textContent = "−";
   } else {
@@ -10,6 +10,64 @@ function toggleAccordion(id) {
     icon.textContent = "+";
   }
 }
+
+// JavaScript to handle clicking on the search icon
+document.addEventListener("DOMContentLoaded", function () {
+  var searchIcon = document.querySelector(".cart__inputImg");
+  var searchInput = document.querySelector(".cart__input");
+  var searchContainer = document.querySelector(".cart__inputContainer");
+
+  searchIcon.addEventListener("click", function () {
+    if (window.innerWidth < 1025) {
+      searchInput.focus();
+      searchContainer.style.width = "100px";
+      searchInput.style.border = "1px solid black";
+    }
+  });
+
+  searchInput.addEventListener("blur", function () {
+    if (window.innerWidth < 1025 && !this.value) {
+      searchContainer.style.width = "48px";
+      this.style.opacity = "1";
+      this.style.border = "none";
+    }
+  });
+
+  // Add a listener for window resizing
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 1025) {
+      searchInput.style.border = "1px solid black";
+    } else if (!searchInput.value) {
+      searchContainer.style.width = "48px";
+      searchInput.style.opacity = "0";
+      searchInput.style.border = "none";
+    }
+  });
+});
+
+function updateCartButton() {
+  var cartButton = document.querySelector(".cart__button");
+  var cartCounter = cartButton.querySelector(".cart__counter");
+  var myCartText = cartButton.querySelectorAll("span")[1]; // Assuming "MY CART" is the second span
+  var shapeImg = cartButton.querySelector("img:last-of-type");
+
+  if (window.innerWidth >= 1025) {
+    // Hide elements for wider screens
+    if (cartCounter) cartCounter.style.display = "inline-block";
+    if (myCartText) myCartText.style.display = "inline-block";
+    if (shapeImg) shapeImg.style.display = "inline-block";
+  } else {
+    if (cartCounter) cartCounter.style.display = "none";
+    if (myCartText) myCartText.style.display = "none";
+    if (shapeImg) shapeImg.style.display = "none";
+  }
+}
+
+// Run the function on initial load
+updateCartButton();
+
+// Add the event listener for resizing the window
+window.addEventListener("resize", updateCartButton);
 
 function fetchCountries() {
   fetch("https://restcountries.com/v3.1/all")

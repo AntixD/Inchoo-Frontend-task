@@ -16,7 +16,6 @@ html {
   height: 48px;
   background: #2f2f2f;
   padding: 0 300px;
-  gap: 140px;
 }
 
 .nav__container_one {
@@ -34,6 +33,13 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+.nav__phone {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  gap: 8px;
 }
 
 .nav__phone_img {
@@ -62,9 +68,15 @@ html {
   color: inherit;
 }
 
+.ul__navLinks li:hover {
+  color: #008421;
+  transition: ease-in 0.3s;
+}
+
 .nav__container_two {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav__msg_two {
@@ -76,6 +88,13 @@ html {
   line-height: 24px;
 }
 
+.nav__signIn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
 .nav__signIn_btn {
   color: #f5f5f5;
   font-family: Bebas Neue;
@@ -84,6 +103,11 @@ html {
   font-weight: 400;
   line-height: 24px;
   text-transform: uppercase;
+}
+
+.nav__signIn_btn:hover {
+  color: #008421;
+  transition: ease-in 0.3s;
 }
 
 /* Cart Section */
@@ -224,6 +248,12 @@ html {
   line-height: 24px; /* 133.333% */
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
+}
+
+.cart__button:hover {
+  background: #023810;
+  transition: ease-in 0.3s;
 }
 
 /* Shopping CSS */
@@ -242,7 +272,7 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 64px; /* 88.889% */
-  margin: 0;
+  margin-top: 40px;
 }
 
 .shopping__headerNav {
@@ -268,7 +298,7 @@ html {
 }
 
 .shopping__headerNav-item-two {
-  margin-right: 90px;
+  margin-right: 66px;
   color: #2f2f2f;
   font-family: Titillium Web;
   font-size: 14px;
@@ -300,7 +330,6 @@ html {
 .shopping__item-image {
   width: 300px;
   height: 145px;
-  margin-right: 48px;
   height: auto;
 }
 
@@ -360,21 +389,21 @@ html {
   margin: 0;
 }
 
-.shopping__subtotal {
+.shopping__subtotal-two {
   color: #2f2f2f;
   font-family: Titillium Web;
   font-size: 14px;
   font-style: normal;
+  margin-left: 60px;
   font-weight: 700;
   line-height: 24px; /* 171.429% */
-  margin-left: 68px;
 }
 
 .shopping__remove {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-left: 68px;
+  margin-left: 50px;
   border: none;
   background: none;
   cursor: pointer;
@@ -424,6 +453,12 @@ html {
   cursor: pointer;
 }
 
+.shopping__apply-btn:hover {
+  background: #0a0a0a;
+  color: #fff;
+  transition: ease-in 0.3s;
+}
+
 .shopping__update-btn {
   display: flex;
   width: 294px;
@@ -442,7 +477,17 @@ html {
   border: none;
 }
 
+.shopping__update-btn:hover {
+  background-color: #0a0a0a;
+  transition: ease-in 0.3s;
+  cursor: pointer;
+}
+
 /* Summary */
+
+.shopping__summary-container {
+  width: 100%;
+}
 
 .shopping__global_inner {
   margin-top: 20px;
@@ -462,10 +507,8 @@ html {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
-  gap: 12px;
   align-items: center;
-  width: 294px;
+  width: 100%;
   height: 56px;
   background: #f5f5f5;
   color: #2f2f2f;
@@ -473,13 +516,18 @@ html {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 133.333% */
+  line-height: 24px;
   text-transform: uppercase;
+}
+
+.shopping__inner_text {
+  margin-left: 24px;
 }
 
 .shopping__estimate-toggle-icon {
   font-weight: bold;
-  font-size: 24px; /* Adjust the size as needed */
+  font-size: 24px;
+  margin-right: 24px;
 }
 
 .shopping__estimate-details {
@@ -488,10 +536,18 @@ html {
 }
 
 .shopping__summary-details {
-  width: 294px;
   height: auto;
   background: #f5f5f5;
   padding: 24px;
+}
+
+.responsive__layout_block {
+  display: flex;
+}
+
+.responsive__layout_block-two {
+  display: flex;
+  align-items: center;
 }
 
 .shopping__subtotal,
@@ -511,9 +567,7 @@ html {
   text-align: center;
   text-transform: uppercase;
   background: #008421;
-  color: #fff;
   color: #f5f5f5;
-
   text-align: center;
   font-family: Bebas Neue;
   font-size: 24px;
@@ -522,6 +576,12 @@ html {
   line-height: 24px; /* 100% */
   text-transform: uppercase;
   margin-top: 40px;
+  cursor: pointer;
+}
+
+.shopping__checkout-btn:hover {
+  background: #023810;
+  transition: ease-in 0.3s;
 }
 
 .text-dev {
@@ -570,6 +630,7 @@ html {
   background: none;
   border: none;
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   color: #2f2f2f;
@@ -585,9 +646,6 @@ html {
 }
 
 .shopping__estimate-details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
@@ -599,7 +657,7 @@ html {
 
 .country__state {
   border: 2px solid #828282;
-  width: 90%;
+  width: 89.5%;
   height: 48px;
   border: 2px solid #2f2f2f;
   appearance: none;
@@ -658,6 +716,11 @@ html {
   margin-top: 120px;
 }
 
+.footer__elements .footer__element a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer__elements {
   display: flex;
   align-items: center;
@@ -670,6 +733,11 @@ html {
   line-height: 16px; /* 123.077% */
   text-decoration-line: underline;
   text-transform: uppercase;
+}
+
+.footer__element:hover {
+  color: #008421;
+  transition: ease-in 0.3s;
 }
 
 .footer_elements_two {
@@ -700,4 +768,278 @@ html {
 
 .footer__phoneNumb {
   margin-left: 12px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/* responsive */
+
+@media (max-width: 1880px) {
+  .header {
+    padding: 0 200px;
+  }
+
+  .cart_inner {
+    padding: 24px 200px;
+  }
+
+  .shopping__container {
+    padding: 0 200px;
+  }
+}
+
+@media (max-width: 1650px) {
+  .header {
+    padding: 0 100px;
+  }
+
+  .cart_inner {
+    padding: 24px 100px;
+  }
+
+  .shopping__container {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .header {
+    padding: 0 40px;
+  }
+
+  .cart_inner {
+    padding: 24px 40px;
+  }
+
+  .shopping__container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .cart_inner {
+    padding: 24px 20px;
+  }
+
+  .shopping__container {
+    padding: 0 20px;
+  }
+
+  .country__state {
+    width: 92%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .nav__contact {
+    display: none;
+  }
+
+  .nav__container_two {
+    display: none;
+  }
+
+  .cart__input {
+    width: 200px;
+  }
+
+  .shopping__header {
+    font-size: 40px;
+  }
+
+  .shopping__item-image {
+    width: 150px;
+    height: 100px;
+  }
+
+  .shopping__item-title {
+    width: 220px;
+  }
+}
+
+@media (max-width: 1025px) and (min-width: 325px) {
+  .cart__input {
+    width: 0;
+    padding-left: 0;
+    padding-right: 50px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .cart__input:focus {
+    width: 200px;
+    padding: 0 16px;
+    border: 1px solid black;
+    cursor: text;
+  }
+
+  .cart__inputContainer:hover .cart__input {
+    border: 1px solid #0a0a0a;
+    transition: width 0.3s ease-in, border 0.3s ease;
+  }
+
+  .cart__inputImg {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+
+  .cart__input:focus + .cart__inputImg {
+    display: none;
+  }
+
+  .shopping__item-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .shopping__item-title {
+    width: 150px;
+  }
+
+  .shopping__checkout-btn {
+    font-size: 18px;
+  }
+
+  .text-whole {
+    font-size: 20px;
+  }
+
+  .text-dev {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .cart__button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shopping__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .shopping__item-image {
+    width: 100%;
+    height: 100px;
+  }
+
+  .shopping__item-title {
+    width: 100%;
+  }
+
+  .country__state {
+    width: 96.5%;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer__container {
+    padding: 24px 0;
+    height: auto;
+  }
+
+  .footer__elements {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_elements_two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .line__spread {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .cart__tabs {
+    display: none;
+  }
+
+  .cart__container_one {
+    gap: 20px;
+  }
+
+  .cart__inchoo_logo {
+    width: 100px;
+  }
+
+  .shopping__headerNav {
+    display: none;
+  }
+
+  .hamburger__icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .shopping__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive__layout_block-two {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .shopping__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .shopping__discount {
+    width: 100%;
+  }
+
+  .shopping__update-btn {
+    width: 100%;
+  }
+
+  .nav__phone span {
+    display: none;
+  }
+
+  .nav__phone {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav__container_one {
+    gap: 0;
+  }
+}
+
+@media (max-width: 370px) {
+  .nav__container_one {
+    display: none;
+  }
+
+  .cart__input {
+    width: 0px;
+  }
 }

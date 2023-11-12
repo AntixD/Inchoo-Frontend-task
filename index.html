@@ -12,10 +12,10 @@
       <div class="nav__container_one">
         <div class="nav__contactContainer">
           <span class="nav__contact"> Contact our Customer Service </span>
-          <span class="nav__phone">
+          <div class="nav__phone">
             <img class="nav__phone_img" src="./assets/Shape.png" />
-            (800) 333-3567
-          </span>
+            <span>(800) 333-3567</span>
+          </div>
         </div>
         <nav class="nav__navBar">
           <ul class="ul__navLinks">
@@ -29,6 +29,8 @@
         <span class="nav__msg_two">
           Promo message area - shipping advantages, special offers…
         </span>
+      </div>
+      <div class="nav__container_three">
         <div class="nav__signIn">
           <img class="nav__user_img" src="./assets/Shape (1).png" alt="logIn" />
           <span class="nav__signIn_btn">SIGN IN</span>
@@ -40,6 +42,9 @@
     <section class="cart__container">
       <div class="cart_inner">
         <div class="cart__container_one">
+          <div class="hamburger-menu">
+            <img class="hamburger__icon" src="./assets/menu.png" />
+          </div>
           <img
             class="cart__inchoo_logo"
             src="./assets/inchoo-logo 1.png"
@@ -106,7 +111,7 @@
           <button class="cart__button">
             <span class="cart__counter">2</span>
             <img src="./assets/shopping-cart.png" alt="cart" />
-            MY CART
+            <span>MY CART</span>
             <img src="./assets/Shape (3).png" alt="" />
           </button>
         </div>
@@ -129,60 +134,69 @@
                 </div>
               </header>
               <div class="shopping__item">
-                <img
-                  class="shopping__item-image"
-                  src="./assets/flip_top_frameless_.png"
-                  alt="Jeep Soft Top"
-                />
-                <div class="shopping__item-description">
-                  <p class="shopping__item-title">
-                    Flip Top™ Complete Replacement Soft Top, Jeep 1976-1995
-                    CJ-7/Wrangler, No doors included, Clear side and rear
-                    windows
-                  </p>
-                  <p class="shopping__item-color">
-                    <span class="color">Color:</span> Black Denim
-                  </p>
-                </div>
-                <div class="shopping__quantity">
-                  <input
-                    class="shopping__quantityInteractive"
-                    type="number"
-                    value="1"
+                <div class="responsive__layout_block">
+                  <img
+                    class="shopping__item-image"
+                    src="./assets/flip_top_frameless_.png"
+                    alt="Jeep Soft Top"
                   />
+                  <div class="shopping__item-description">
+                    <p class="shopping__item-title">
+                      Flip Top™ Complete Replacement Soft Top, Jeep 1976-1995
+                      CJ-7/Wrangler, No doors included, Clear side and rear
+                      windows
+                    </p>
+                    <p class="shopping__item-color">
+                      <span class="color">Color:</span> Black Denim
+                    </p>
+                  </div>
                 </div>
-                <div class="shopping__subtotal">$150.00</div>
-                <div class="shopping__remove">
-                  <img src="./assets/Shape (4).png" alt="" />
-                  <img src="./assets/Shape (5).png" alt="" />
+                <div class="responsive__layout_block-two">
+                  <div class="shopping__quantity">
+                    <input
+                      class="shopping__quantityInteractive"
+                      type="number"
+                      value="1"
+                    />
+                  </div>
+                  <div class="shopping__subtotal-two">$150.00</div>
+                  <div class="shopping__remove">
+                    <img src="./assets/Shape (4).png" alt="" />
+                    <img src="./assets/Shape (5).png" alt="" />
+                  </div>
                 </div>
               </div>
               <div class="shopping__item">
-                <img
-                  class="shopping__item-image"
-                  src="./assets/flip_top_frameless_.png"
-                  alt="Jeep Soft Top"
-                />
-                <div class="shopping__item-description">
-                  <p class="shopping__item-title">
-                    FLIP TOP™ COMPLETE REPLACEMENT SOFT TOP, JEEP 1976-1995 CJ-7
-                    / WRANGLER, NO DOORS INCLUDED, CLEAR SIDE AND REAR WINDOWS
-                  </p>
-                  <p class="shopping__item-color">
-                    <span class="color">Color:</span> Black Denim
-                  </p>
-                </div>
-                <div class="shopping__quantity">
-                  <input
-                    class="shopping__quantityInteractive"
-                    type="number"
-                    value="1"
+                <div class="responsive__layout_block">
+                  <img
+                    class="shopping__item-image"
+                    src="./assets/flip_top_frameless_.png"
+                    alt="Jeep Soft Top"
                   />
+                  <div class="shopping__item-description">
+                    <p class="shopping__item-title">
+                      Flip Top™ Complete Replacement Soft Top, Jeep 1976-1995
+                      CJ-7/Wrangler, No doors included, Clear side and rear
+                      windows
+                    </p>
+                    <p class="shopping__item-color">
+                      <span class="color">Color:</span> Black Denim
+                    </p>
+                  </div>
                 </div>
-                <div class="shopping__subtotal">$150.00</div>
-                <div class="shopping__remove">
-                  <img src="./assets/Shape (4).png" alt="" />
-                  <img src="./assets/Shape (5).png" alt="" />
+                <div class="responsive__layout_block-two">
+                  <div class="shopping__quantity">
+                    <input
+                      class="shopping__quantityInteractive"
+                      type="number"
+                      value="1"
+                    />
+                  </div>
+                  <div class="shopping__subtotal-two">$150.00</div>
+                  <div class="shopping__remove">
+                    <img src="./assets/Shape (4).png" alt="" />
+                    <img src="./assets/Shape (5).png" alt="" />
+                  </div>
                 </div>
               </div>
               <div class="shopping__actions">
@@ -212,7 +226,7 @@
             class="shopping__estimate-toggle"
             onclick="toggleAccordion('estimate-details')"
           >
-            ESTIMATE SHIPPING AND TAX
+            <span class="shopping__inner_text">ESTIMATE SHIPPING AND TAX</span>
             <span class="shopping__estimate-toggle-icon">+</span>
           </div>
 
@@ -271,15 +285,17 @@
 
     <section class="footer__container">
       <div class="footer__elements">
-        <span class="footer__element">ABOUT US </span>
-        <img src="./assets/Line.png" alt="" />
-        <span class="footer__element">CONTACT US </span>
-        <img src="./assets/Line.png" alt="" />
-        <span class="footer__element">SEARCH TERMS </span>
-        <img src="./assets/Line.png" alt="" />
-        <span class="footer__element">PRIVACY AND COOKIE POLICY</span>
-        <img src="./assets/Line.png" alt="" />
-        <span class="footer__element">INSTALLATION VIDEOS</span>
+        <span class="footer__element"><a href="#">ABOUT US</a> </span>
+        <img class="line__spread" src="./assets/Line.png" alt="" />
+        <span class="footer__element"><a href="#">CONTACT US</a></span>
+        <img class="line__spread" src="./assets/Line.png" alt="" />
+        <span class="footer__element"><a href="#">SEARCH TERMS</a></span>
+        <img class="line__spread" src="./assets/Line.png" alt="" />
+        <span class="footer__element"
+          ><a href="#">Privacy and Cookie Policy</a></span
+        >
+        <img class="line__spread" src="./assets/Line.png" alt="" />
+        <span class="footer__element"><a href="#">Installation Videos</a></span>
       </div>
       <div class="footer_elements_two">
         <span class="footer__contact_support"
