@@ -1,16 +1,18 @@
 function toggleAccordion(id) {
   var element = document.getElementById(id);
-  var icon = document.querySelector(".shopping__estimate-toggle-icon");
+  var icon = document.querySelector(".shopping__estimate-toggle-icon img");
+  var innerText = document.querySelector(".shopping__inner_text");
 
   if (element.style.display === "none" || !element.style.display) {
     element.style.display = "block";
-    icon.textContent = "−";
+    icon.src = "./assets/Shape (7).png";
+    innerText.classList.add("shopping__inner_text--active");
   } else {
     element.style.display = "none";
-    icon.textContent = "+";
+    icon.src = "./assets/Shape (6).png";
+    innerText.classList.remove("shopping__inner_text--active");
   }
 }
-
 // JavaScript to handle clicking on the search icon
 document.addEventListener("DOMContentLoaded", function () {
   var searchIcon = document.querySelector(".cart__inputImg");

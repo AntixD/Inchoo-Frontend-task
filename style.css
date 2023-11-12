@@ -503,6 +503,10 @@ html {
   text-transform: uppercase;
 }
 
+.shopping__inner_text--active {
+  color: green;
+}
+
 .shopping__estimate-toggle {
   cursor: pointer;
   display: flex;
